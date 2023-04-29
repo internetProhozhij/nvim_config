@@ -1,6 +1,5 @@
 {
     "suggest.noselect": true,
-    "suggest.maxCompleteItemCount": 7,
     "diagnostic.errorSign": "!",
     "diagnostic.warningSign": "*",
     "diagnostic.infoSign": "?",
