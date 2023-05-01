@@ -3,5 +3,9 @@
     "diagnostic.errorSign": "!",
     "diagnostic.warningSign": "*",
     "diagnostic.infoSign": "?",
-    "diagnostic.hintSign": ">"
+    "diagnostic.hintSign": ">",
+    "python.analysis.autoImportCompletions": false,
+    "python.analysis.typeCheckingMode": "off",
+    "pyright.inlayHints.functionReturnTypes": false,
+    "pyright.inlayHints.variableTypes": false
 }
