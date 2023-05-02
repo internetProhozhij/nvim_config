@@ -32,35 +32,6 @@ keymap.set("n", "<leader>ез", ":tabp<CR>") --переход к предыду�
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
 keymap.set("n", "<leader>у", ":NvimTreeToggle<CR>") -- toggle file explorer
 
---telescope
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>") --поиск файлов в ткущей директории
-keymap.set("n", "<leader>аа", "<cmd>Telescope find_files<CR>") --поиск файлов в ткущей директории
-
-keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>")
-keymap.set("n", "<leader>аы", "<cmd>Telescope live_grep<CR>")
-
-keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>") --поиск по содержимому текущей строки
-keymap.set("n", "<leader>ас", "<cmd>Telescope grep_string<CR>") --поиск по содержимому текущей строки
-
-keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>")
-keymap.set("n", "<leader>аи", "<cmd>Telescope buffers<CR>")
-
-keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>") --поиск по вспомогальтьным тегам
-keymap.set("n", "<leader>ар", "<cmd>Telescope help_tags<CR>") --поиск по вспомогальтьным тегам
-
---telescope + git
-keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<CR>") --отображение фиксаций
-keymap.set("n", "<leader>пс", "<cmd>Telescope git_commits<CR>") --отображение фиксаций
-
-keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<CR>") --отображение фиксаций для текущего файла
-keymap.set("n", "<leader>пас", "<cmd>Telescope git_bcommits<CR>") --отображение фиксаций для текущего файла
-
-keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<CR>") --отображение веток
-keymap.set("n", "<leader>пи", "<cmd>Telescope git_branches<CR>") --отображение веток
-
-keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<CR>") --отобаржение diff-ов
-keymap.set("n", "<leader>пы", "<cmd>Telescope git_status<CR>") --отобаржение diff-ов
-
 --coc
 function _G.show_docs()
     local cw = vim.fn.expand('<cword>')
@@ -133,3 +104,19 @@ keymap.set("n", "<ESC>ае", "<CMD>lua require('FTerm').open()<CR>")
 
 keymap.set("t", "<ESC>ft", "<C-\\><C-n><CMD>lua require('FTerm').exit()<CR>")
 keymap.set("t", "<ESC>ае", "<C-\\><C-n><CMD>lua require('FTerm').exit()<CR>")
+
+--Comment
+keymap.set('n', 'псс', function()
+        return vim.v.count == 0
+            and '<Plug>(comment_toggle_linewise_current)'
+            or '<Plug>(comment_toggle_linewise_count)'
+    end, { expr = true })
+keymap.set('n', 'пис', function()
+        return vim.v.count == 0
+            and '<Plug>(comment_toggle_blockwise_current)'
+            or '<Plug>(comment_toggle_blockwise_count)'
+    end, { expr = true })
+
+vim.keymap.set('n', 'пс', '<Plug>(comment_toggle_linewise)')
+vim.keymap.set('n', 'пи', '<Plug>(comment_toggle_blockwise)')
+

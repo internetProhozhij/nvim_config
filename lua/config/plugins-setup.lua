@@ -42,9 +42,6 @@ return packer.startup(function(use)
 	--дерево файлов
 	use("nvim-tree/nvim-tree.lua")
 
-	--поиск
-	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
-    
     --менеджер языковых пакетов
     use({'neoclide/coc.nvim', branch = 'release'})
     
