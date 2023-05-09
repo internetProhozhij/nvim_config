@@ -32,12 +32,10 @@ opt.langmap = vim.fn.join({
 
 opt.langremap = true
 
-opt.pumheight = 13
+opt.pumheight = 11
 
 opt.backup = false
 opt.writebackup = false
-
-opt.updatetime = 300
 
 opt.relativenumber = true
 opt.number = true

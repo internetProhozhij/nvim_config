@@ -7,5 +7,7 @@
     "python.analysis.autoImportCompletions": false,
     "python.analysis.typeCheckingMode": "off",
     "pyright.inlayHints.functionReturnTypes": false,
-    "pyright.inlayHints.variableTypes": false
+    "pyright.inlayHints.variableTypes": false,
+    "pyright.completion.snippetSupport": false,
+    "python.analysis.useLibraryCodeForTypes": false
 }
