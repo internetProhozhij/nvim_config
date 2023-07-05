@@ -1,24 +1,4 @@
-# Описание
-
-Представленный конфги содержит расширения:
-
-- `"christoomey/vim-tmux-navigator"` для навигации по открытым окнам;
-- `"numToStr/Comment.nvim"` для комментирования;
-- `"nvim-tree/nvim-tree.lua"` для добавления дерева файлов;
-- `"numToStr/FTerm.nvim"` для запуска терминала;
-- `"neoclide/coc.nvim"` для добавления автодополнения и языковых серверов;
-- `"tanvirtin/monokai.nvim"` цветовая схема Monokai
-<!---->
-
-Kонфиг содержит привязку кириллицы к латинице.
-<br>
-
-# Примечание
-
-Если пользовать этот конфиг на GNU/Linux, то придется изменить настройки расширения
-Fterm (./lua/config/plugins/fterm.lua).
-
-# Структура репозитория
+# Структура проекта
 
     ./
     |
@@ -32,13 +12,21 @@ Fterm (./lua/config/plugins/fterm.lua).
     |     |
     |     +---> plugins/ (настройка расширений)
     |     |     |
-    |     |     +---> comment.lua     (настройка comment)
-    |     |     +---> fterm.lua       (настройка fterm)
-    |     |     +---> nvim-tree.lua   (настройка nvim-tree)
-    |     |     +---> telescope.lua   (настройка telescope)
+    |     |     +---> comment.lua
+    |     |     +---> fterm.lua
+    |     |     +---> nvim-tree.lua
     |     |
     |     +---> plugins-setup.lua (установка расширений)
     |
-    +---> coc-settings.json (настройка расширения автодополнения)
+    +---> coc-settings.json (настройка языковых серверов)
     |
-    +---> init.lua (подключение всех файлов конфигурации)
+    +---> init.lua (подключение файлов конфигурации)
+<!---->
+
+# Языковые серверы
+
+- `coc-pyright`: Python
+- `coc-clangd`: C/C++/Objective-C
+- `coc-java`: Java
+- `coc-tsserver`: JS/TypeScript
+- `coc-sql`: SQL
